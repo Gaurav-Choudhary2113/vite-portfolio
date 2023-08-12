@@ -1,7 +1,16 @@
-function App() {
-  const [count, setCount] = useState(0);
+import Navbar from "./Components/Navbar";
+import { useState } from "react";
+import useMediaQuery from "./hooks/useMediaQuery";
 
-  return <></>;
+function App() {
+  const [selectPage, setSelectPage] = useState("home");
+  const isAboveMediumScreens = useMediaQuery("(min-width: 1060px)");
+
+  return (
+    <div className="app bg-deep-blue">
+      <Navbar selectedPage={selectPage} setSelectedPage={setSelectPage} />
+    </div>
+  );
 }
 
 export default App;
