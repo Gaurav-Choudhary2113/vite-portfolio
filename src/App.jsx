@@ -1,7 +1,8 @@
-import Navbar from "./Components/Navbar";
-import DotGroup from "./Components/DotGroup";
-import Landing from "./Components/Landing";
+import Navbar from "./Scenes/Navbar";
+import DotGroup from "./Scenes/DotGroup";
+import Landing from "./Scenes/Landing";
 import { useEffect, useState } from "react";
+import LineGradient from "./Components/LineGradient";
 import useMediaQuery from "./hooks/useMediaQuery";
 
 function App() {
@@ -32,6 +33,7 @@ function App() {
         {isAboveMediumScreens && <DotGroup selectedPage={selectPage} />}
         <Landing setSelectedPage={setSelectPage} />
       </div>
+      <LineGradient />
     </div>
   );
 }
