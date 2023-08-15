@@ -8,13 +8,13 @@ const Landing = ({ setSelectedPage }) => {
   return (
     <section
       id="home"
-      className="md:flex md:justify-between md:items-center md:h-full gap-16 py-10"
+      className="md:flex md:justify-between md:items-center md:h-full gap-8  py-10"
     >
       <div className="md:order-2 flex justify-center basis-3/5 z-10 mt-16 md:-32 mx-5">
         {isAboveMediumScreens ? (
           <div
             className="relative z-0 ml-20 before:absolute before:-top-20 before:-left-20 before:rounded-t-[400px]
-            before:w-[60%] before:max-w-[400px] md:before:max-w-[600px] before:h-full before:border-2 before:border-blue before:z-[-1]"
+            before:w-[60%] before:max-w-[400px] md:before:max-w-[600px] before:h-full before:border-2 before:border-red before:z-[-1]"
           >
             <img
               src="src/assets/profile-image.png"
@@ -31,7 +31,7 @@ const Landing = ({ setSelectedPage }) => {
         )}
       </div>
       {/* MAIN TEXT */}
-      <div className="z-30 basis-2/5 mt-12 md:mt-32 mx-16">
+      <div className="z-30 basis-2/5 mt-12 md:mt-32 mx-28">
         {/* HEADINGS */}
         <motion.div
           initial="hidden"
@@ -46,8 +46,8 @@ const Landing = ({ setSelectedPage }) => {
           <p className="text-7xl font-playfair z-10 text-center md:text-start">
             Gaurav {""}
             <div
-              className="my-6 xs:relative xs:text-deep-blue xs:font-semibold z-20 xs:before:content-brush
-              before:absolute before:-left-[25px] before:-top-[70px] before:z-[-1] "
+              className="my-6 text-6xl xs:relative xs:text-deep-blue xs:font-semibold z-20 xs:before:content-brush
+              before:absolute before:-left-[95px] before:-top-[45px] before:z-[-1]"
             >
               Choudhary
             </div>
@@ -71,7 +71,7 @@ const Landing = ({ setSelectedPage }) => {
           }}
         >
           <AnchorLink
-            className="bg-gradient-rainblue text-deep-blue rounded-sm py-y px-7 font-semibold hover:bg-blue hover:text-white transition duration-500"
+            className="bg-gradient-rainblue text-deep-blue rounded-sm py-y px-7 font-semibold hover:bg-blue hover:text-white transition duration-500 cursor-pointer"
             onClick={() => setSelectedPage("contact")}
           >
             Contact Me
@@ -80,7 +80,7 @@ const Landing = ({ setSelectedPage }) => {
             className="rounded-r-sm bg-gradient-rainblue py-0.5 pr-0.5"
             onClick={() => setSelectedPage("contact")}
           >
-            <div className="bg-deep-blue hover:text-red transition duration-500 w-full h-full flex items-center justify-center font-playfair px-10">
+            <div className="bg-deep-blue hover:text-red transition duration-500 w-full h-full flex items-center justify-center font-playfair px-10 cursor-pointer">
               <div>Let's Talk</div>
             </div>
           </AnchorLink>

@@ -18,6 +18,7 @@ const Contact = () => {
   return (
     <section id="contact" className="py-48">
       <motion.div
+        className="flex justify-end w-full"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.5 }}
@@ -62,13 +63,13 @@ const Contact = () => {
           }}
         >
           <form
-            action="https://formsubmit.co/gloonaich@gmail.com"
+            action="https://formsubmit.co/8fc742b48d7a6c6a4745add36861b097"
             method="POST"
             target="_blank"
             onSubmit={onSubmit}
           >
             <input
-              className="w-full bg-blue font-semibold placeholder-opaque-black p-3"
+              className="w-full bg-blue font-semibold placeholder-opaque-black p-3 my-1"
               type="text"
               placeholder="NAME"
               {...register("name", {
@@ -83,7 +84,7 @@ const Contact = () => {
               </p>
             )}
             <input
-              className="w-full bg-blue font-semibold placeholder-opaque-black p-3"
+              className="w-full bg-blue font-semibold placeholder-opaque-black p-3 my-1"
               type="text"
               placeholder="EMAIL"
               {...register("email", {
@@ -98,7 +99,7 @@ const Contact = () => {
               </p>
             )}
             <textarea
-              className="w-full bg-blue font-semibold placeholder-opaque-black p-3"
+              className="w-full bg-blue font-semibold placeholder-opaque-black p-3 my-1"
               type="text"
               placeholder="MESSAGE"
               rows="4"
