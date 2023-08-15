@@ -56,7 +56,7 @@ const Landing = ({ setSelectedPage }) => {
           <p className="mt-10 mb-7 md:px-0 text-sm text-center md:text-start xs:text-center xs:px-12">
             Enthusiastic in front-end and back-end development with a strong
             desire to learn and grow as a coder. Currently proficient in React
-            and NextJS
+            and NextJS.
           </p>
         </motion.div>
         {/* Call actions */}

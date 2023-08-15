@@ -10,7 +10,7 @@ const Footer = () => {
             Gaurav Choudhary
           </p>
           <p className="font-playfair text-md text-yellow">
-            ©2023 ESPER. All Rights Reserved.
+            ©2023 Madara Technologies. All Rights Reserved.
           </p>
         </div>
       </div>
