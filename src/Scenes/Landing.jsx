@@ -17,14 +17,14 @@ const Landing = ({ setSelectedPage }) => {
             before:w-[60%] before:max-w-[400px] md:before:max-w-[600px] before:h-full before:border-2 before:border-red before:z-[-1] "
           >
             <img
-              src="src/assets/profile-image.png"
+              src="/profile-image.png"
               alt="profile"
               className="hover:filter hover:saturate-200 transition duration-500 z-10 w-[70%] max-w-[400px] md:max-w-[600px]"
             />
           </div>
         ) : (
           <img
-            src="src/assets/profile-image.png"
+            src="/profile-image.png"
             alt="profile"
             className="hover:filter hover:saturate-200 transition duration-500 z-10 w-full max-w-[400px] md:max-w-[600px]"
           />

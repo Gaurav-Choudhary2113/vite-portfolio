@@ -49,7 +49,7 @@ const Contact = () => {
             visible: { opacity: 1, y: 0 },
           }}
         >
-          <img src="src/assets/contact-image.jpeg" alt="contact" />
+          <img src="/contact-image.jpeg" alt="contact" />
         </motion.div>
         <motion.div
           className="basis-1/2 t-10 md:mt-0"
