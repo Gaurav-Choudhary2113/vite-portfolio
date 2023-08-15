@@ -4,6 +4,7 @@ import Landing from "./Scenes/Landing";
 import MySkills from "./Scenes/MySkills";
 import Projects from "./Scenes/Projects";
 import Contact from "./Scenes/Contact";
+import Footer from "./Scenes/Footer";
 import { useEffect, useState } from "react";
 import LineGradient from "./Components/LineGradient";
 import useMediaQuery from "./hooks/useMediaQuery";
@@ -48,6 +49,7 @@ function App() {
       <div className="w-5/6 mx-auto md:h-full">
         <Contact />
       </div>
+      <Footer />
     </div>
   );
 }
