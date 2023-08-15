@@ -14,7 +14,7 @@ const Landing = ({ setSelectedPage }) => {
         {isAboveMediumScreens ? (
           <div
             className="relative z-0 ml-20 before:absolute before:-top-20 before:-left-20 before:rounded-t-[400px]
-            before:w-[60%] before:max-w-[400px] md:before:max-w-[600px] before:h-full before:border-2 before:border-red before:z-[-1]"
+            before:w-[60%] before:max-w-[400px] md:before:max-w-[600px] before:h-full before:border-2 before:border-red before:z-[-1] "
           >
             <img
               src="src/assets/profile-image.png"
@@ -31,7 +31,7 @@ const Landing = ({ setSelectedPage }) => {
         )}
       </div>
       {/* MAIN TEXT */}
-      <div className="z-30 basis-2/5 mt-12 md:mt-32 mx-28">
+      <div className="z-30 basis-2/5 mt-12 md:mt-32 md:mx-28">
         {/* HEADINGS */}
         <motion.div
           initial="hidden"
@@ -43,24 +43,25 @@ const Landing = ({ setSelectedPage }) => {
             visible: { opacity: 1, x: 0 },
           }}
         >
-          <p className="text-7xl font-playfair z-10 text-center md:text-start">
-            Gaurav {""}
+          <p className="text-6xl font-playfair z-10 text-center md:text-start">
+            Gaurav
             <div
               className="my-6 text-6xl xs:relative xs:text-deep-blue xs:font-semibold z-20 xs:before:content-brush
-              before:absolute before:-left-[95px] before:-top-[45px] before:z-[-1]"
+              before:absolute md:before:-left-[95px] md:before:-top-[45px] xs:before:justify-center xs:before:-top-[35px] xs:before:mx-[-120px] before:z-[-1]"
             >
               Choudhary
             </div>
           </p>
 
-          <p className="mt-10 mb-7 text-sm text-center md:text-start">
-            Adipiscing arcu, in aliquam fringilla cursus. Elit arcu elementum
-            viverra malesuada sem ac faucibus dolor. Sagittis scelerisque.
+          <p className="mt-10 mb-7 text-sm text-center md:text-start xs:text-center xs:px-12">
+            Enthusiastic in front-end and back-end development with a strong
+            desire to learn and grow as a coder. Currently proficient in React
+            and NextJS
           </p>
         </motion.div>
         {/* Call actions */}
         <motion.div
-          className="flex mt-5 justify-centermd:jutify-start"
+          className="flex mt-5 justify-center md:jutify-start"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.5 }}
