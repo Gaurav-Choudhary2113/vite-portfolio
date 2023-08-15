@@ -47,13 +47,13 @@ const Landing = ({ setSelectedPage }) => {
             Gaurav
             <div
               className="my-6 text-6xl xs:relative xs:text-deep-blue xs:font-semibold z-20 xs:before:content-brush
-              before:absolute md:before:-left-[95px] md:before:-top-[45px] xs:before:justify-center xs:before:-top-[35px] xs:before:mx-[-120px] before:z-[-1]"
+              before:absolute before:-top-[40px] xs:before:justify-center xs:before:mx-[-120px] before:z-[-1]"
             >
               Choudhary
             </div>
           </p>
 
-          <p className="mt-10 mb-7 text-sm text-center md:text-start xs:text-center xs:px-12">
+          <p className="mt-10 mb-7 md:px-0 text-sm text-center md:text-start xs:text-center xs:px-12">
             Enthusiastic in front-end and back-end development with a strong
             desire to learn and grow as a coder. Currently proficient in React
             and NextJS
@@ -61,7 +61,7 @@ const Landing = ({ setSelectedPage }) => {
         </motion.div>
         {/* Call actions */}
         <motion.div
-          className="flex mt-5 justify-center md:jutify-start"
+          className="flex mt-5 justify-center md:justify-start"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.5 }}
