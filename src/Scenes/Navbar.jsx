@@ -3,20 +3,25 @@ import AnchorLink from "react-anchor-link-smooth-scroll";
 import useMediaQuery from "../hooks/useMediaQuery";
 import closeicon from "../assets/closeicon.svg";
 import menuicon from "../assets/menuicon.svg";
-
+import PropTypes from "prop-types";
 const Link = ({ page, selectedPage, setSelectedPage }) => {
   const lowerCasePage = page.toLowerCase();
   return (
     <AnchorLink
       className={`${
         selectedPage === lowerCasePage ? "text-yellow" : ""
-      } hover:text-yellow transition duration-500`}
+      } hover:text-yellow transition duration-400 text-base navbar-link cursor-pointer no-underline`}
       href={`#${lowerCasePage}`}
       onClick={() => setSelectedPage(lowerCasePage)}
     >
       {page}
     </AnchorLink>
   );
+};
+Link.propTypes = {
+  page: PropTypes.string.isRequired,
+  selectedPage: PropTypes.string.isRequired,
+  setSelectedPage: PropTypes.string.isRequired,
 };
 
 const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
@@ -28,7 +33,7 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
   return (
     <nav className={`${navbarBackground} z-40 w-full fixed top-0 py-6`}>
       <div className="flex items-center justify-between mx-auto w-5/6">
-        <h4 className="font-playfair text-3xl font-bold">NAVBAR</h4>
+        <h4 className="font-playfair text-3xl font-bold">Portfolio</h4>
         {/*Desktop nav */}
         {isAboveSmallScreens ? (
           <div className="flex justify-between gap-16 font-opensans text-sm font-semibold">
@@ -98,5 +103,10 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
       </div>
     </nav>
   );
+};
+Navbar.propTypes = {
+  isTopOfPage: PropTypes.string.isRequired,
+  selectedPage: PropTypes.string.isRequired,
+  setSelectedPage: PropTypes.string.isRequired,
 };
 export default Navbar;

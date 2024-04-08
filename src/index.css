@@ -11,3 +11,23 @@ body,
   background-color: #010026;
   @apply text-white;
 }
+.navbar-link {
+  position: relative;
+  text-decoration: none;
+  color: inherit;
+}
+
+.navbar-link::before {
+  content: "";
+  position: absolute;
+  bottom: -2px; /* Adjust this value to change the distance of the underline from text */
+  left: 0;
+  width: 0%;
+  height: 3px; /* Adjust this value to change the thickness of the underline */
+  background-color: #fdcc49; /* Change the color of the underline */
+  transition: width 0.2s ease-in-out;
+}
+
+.navbar-link:hover::before {
+  width: 55%; /* Adjust this value to control how much the underline expands on hover */
+}

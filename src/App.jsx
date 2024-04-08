@@ -1,5 +1,4 @@
 import Navbar from "./Scenes/Navbar";
-import DotGroup from "./Scenes/DotGroup";
 import Landing from "./Scenes/Landing";
 import MySkills from "./Scenes/MySkills";
 import Projects from "./Scenes/Projects";
@@ -7,12 +6,10 @@ import Contact from "./Scenes/Contact";
 import Footer from "./Scenes/Footer";
 import { useEffect, useState } from "react";
 import LineGradient from "./Components/LineGradient";
-import useMediaQuery from "./hooks/useMediaQuery";
 
 function App() {
   const [selectPage, setSelectPage] = useState("home");
   const [isTopOfPage, setIsTopOfPage] = useState(true);
-  const isAboveMediumScreens = useMediaQuery("(min-width: 1060px)");
 
   useEffect(() => {
     const handleScroll = () => {
@@ -34,7 +31,6 @@ function App() {
         setSelectedPage={setSelectPage}
       />
       <div className="w=5/6 mx-auto md:h-full">
-        {isAboveMediumScreens && <DotGroup selectedPage={selectPage} />}
         <Landing setSelectedPage={setSelectPage} />
       </div>
       <LineGradient />

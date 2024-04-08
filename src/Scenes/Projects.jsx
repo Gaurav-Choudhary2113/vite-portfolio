@@ -1,6 +1,6 @@
 import LineGradient from "../Components/LineGradient";
 import { motion } from "framer-motion";
-
+import PropTypes from "prop-types";
 const container = {
   hidden: {},
   visible: {
@@ -96,5 +96,7 @@ const Projects = () => {
     </section>
   );
 };
-
+Project.propTypes = {
+  title: PropTypes.string.isRequired,
+};
 export default Projects;
