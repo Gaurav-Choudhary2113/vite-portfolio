@@ -1,39 +1,18 @@
-import useMediaQuery from "../hooks/useMediaQuery";
-
 import SocialMediaIcons from "../Components/SocialMediaIcons";
 import { motion } from "framer-motion";
-
+import TypingText from "../Components/TypingText";
 const Landing = () => {
-  const isAboveMediumScreens = useMediaQuery("(min-width: 1060px)");
+  const texts = [
+    "Hello, my name is              ",
+    "const Gaurav = ( name, passion ) => {              ",
+  ];
+  const speed = 50;
   return (
     <section
       id="home"
       className="md:flex md:justify-between md:items-center md:h-full gap-8  py-10"
     >
-      <div className="md:order-2 flex justify-center basis-3/5 z-10 mt-16 md:-32 mx-5">
-        {isAboveMediumScreens ? (
-          <div
-            className="relative z-0 ml-20 before:absolute before:-top-20 before:-left-20 before:rounded-t-[400px]
-            before:w-[60%] before:max-w-[400px] md:before:max-w-[600px] before:h-full before:border-2 before:border-red before:z-[-1] "
-          >
-            <motion.div whileHover={{ scale: 1.05 }}>
-              <img
-                src="/profile-image.png"
-                alt="profile"
-                className="hover:filter hover: transition duration-500 z-10 w-[70%] max-w-[400px] md:max-w-[600px]"
-              />
-            </motion.div>
-          </div>
-        ) : (
-          <img
-            src="/profile-image.png"
-            alt="profile"
-            className="hover:filter hover:saturate-100 transition duration-500 z-10 w-full max-w-[400px] md:max-w-[600px]"
-          />
-        )}
-      </div>
-
-      <div className="z-30 basis-2/5 mt-12 md:mt-32 md:mx-28">
+      <div className="md:mx-64">
         <motion.div
           initial="hidden"
           whileInView="visible"
@@ -44,17 +23,17 @@ const Landing = () => {
             visible: { opacity: 1, x: 0 },
           }}
         >
-          <p className="text-6xl font-playfair z-10 text-center md:text-start">
-            Gaurav
-            <div
-              className="my-6 text-6xl xs:relative xs:text-deep-blue xs:font-semibold z-20 xs:before:content-brush
-              before:absolute before:-top-[40px] xs:before:justify-center xs:before:mx-[-120px] before:z-[-1]"
-            >
-              Choudhary
-            </div>
+          <p className="h-8 ml-2">
+            <TypingText texts={texts} speed={speed} delay={1000} />
+          </p>
+          <p className="inter text-7xl leading-12 font-playfair z-10 text-center md:text-start">
+            Gaurav Choudhary.
+          </p>
+          <p className="inter text-6xl font-playfair z-10 text-center md:text-start opacity-50">
+            Crafting Meaningful and Elegant Websites.
           </p>
 
-          <p className="mt-10 mb-7 md:px-0 text-md text-center md:text-start xs:text-center xs:px-12">
+          <p className="code mt-10 mb-7 md:px-0 text-md text-center md:text-start xs:text-center xs:px-12">
             A Front-End Developer and a Cyebr Security Enthusiast with a strong
             desire to learn and grow as a coder. Currently proficient in React
             and NextJS.

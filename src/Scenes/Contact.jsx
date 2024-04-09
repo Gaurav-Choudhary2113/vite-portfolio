@@ -1,4 +1,3 @@
-import LineGradient from "../Components/LineGradient";
 import { useForm } from "react-hook-form";
 import { motion } from "framer-motion";
 
@@ -32,9 +31,7 @@ const Contact = () => {
           <p className="font-playfair font-semibold text-4xl">
             CONTACT ME<span className="text-yellow"> TO GET STARTED</span>
           </p>
-          <div className="flex md:justify-end my-5">
-            <LineGradient width="mx-auto w-2/4" />
-          </div>
+          <div className="flex md:justify-end my-5"></div>
         </div>
       </motion.div>
       <div className="md:flex md:justify-between gap-16 mt-5">

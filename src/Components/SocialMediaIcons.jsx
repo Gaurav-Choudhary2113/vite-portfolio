@@ -1,30 +1,30 @@
+import { FaInstagram } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa6";
+import { FaLinkedin } from "react-icons/fa";
+
 const SocialMediaIcons = () => {
   return (
-    <div className="flex justify-center md:justify-start my-10 gap-7">
+    <div className="flex justify-center md:justify-start gap-7">
       <a
-        className="hover:opacity-50 transition duration-500"
         href="https://www.linkedin.com/in/gaurav-choudhary-0a5218254/"
         target="_blank"
         rel="noreferrer"
       >
-        <img src="/linkedin.png" alt="linkedin-link" />
+        <FaLinkedin className="size-8" />
       </a>
-
       <a
-        className="hover:opacity-50 transition duration-500"
         href="https://www.instagram.com/_gaurav17.4/"
         target="_blank"
         rel="noreferrer"
       >
-        <img src="/instagram.png" alt="instagram-link" />
+        <FaInstagram className="size-8" />
       </a>
       <a
-        className="hover:opacity-50 transition duration-508 w-7"
         href="https://github.com/Gaurav-Choudhary2113"
         target="_blank"
         rel="noreferrer"
       >
-        <img src="/github.png" alt="github-link" />
+        <FaGithub className="size-8" />
       </a>
     </div>
   );
