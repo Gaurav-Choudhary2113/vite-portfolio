@@ -32,6 +32,12 @@ body,
   font-weight: 400;
   font-style: normal;
 }
+.codesemi{
+  font-family: "Source Code Pro", monospace;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
 
 .navbar-link {
   position: relative;
@@ -53,3 +59,27 @@ body,
 .navbar-link:hover::before {
   width: 55%; /* Adjust this value to control how much the underline expands on hover */
 }
+
+/* Define the style for the scrollbar track */
+::-webkit-scrollbar {
+  width: 4px;
+  /* Width of the scrollbar */
+}
+
+
+/* Define the style for the scrollbar handle (thumb) */
+::-webkit-scrollbar-thumb {
+  background-color: rgb(135, 197, 218);
+  /* Yellow color */
+ 
+  /* Rounded corners */
+}
+
+/* Define the style for the scrollbar track */
+::-webkit-scrollbar-track {
+  background-color: #020202;
+  /* Black color */
+
+  /* Rounded corners */
+}
+

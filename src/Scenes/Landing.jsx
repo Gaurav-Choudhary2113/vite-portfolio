@@ -29,7 +29,7 @@ const Landing = () => {
           <p className="inter text-7xl leading-12 font-playfair z-10 text-center md:text-start">
             Gaurav Choudhary.
           </p>
-          <p className="inter text-6xl font-playfair z-10 text-center md:text-start opacity-50">
+          <p className="inter text-6xl font-playfair z-10 text-center md:text-start text-[#ffffffa1]">
             Crafting Meaningful and Elegant Websites.
           </p>
 

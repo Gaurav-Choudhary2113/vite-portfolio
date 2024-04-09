@@ -4,24 +4,24 @@ import MySkills from "./Scenes/MySkills";
 import Projects from "./Scenes/Projects";
 import Contact from "./Scenes/Contact";
 import Footer from "./Scenes/Footer";
-
+import { ReactLenis } from "@studio-freight/react-lenis";
 function App() {
   return (
     <div className="app bg-deep-blue">
-      <Navbar />
-      <div className="w=5/6 mx-auto md:h-full">
+      <ReactLenis
+        root
+        options={{
+          lerp: 0.1,
+          duration: 1.5,
+        }}
+      >
+        <Navbar />
         <Landing />
-      </div>
-      <div className="w=5/6 mx-auto md:h-full">
         <MySkills />
-      </div>
-      <div className="w-5/6 mx-auto">
         <Projects />
-      </div>
-      <div className="w-5/6 mx-auto md:h-full">
         <Contact />
-      </div>
-      <Footer />
+        <Footer />
+      </ReactLenis>
     </div>
   );
 }
