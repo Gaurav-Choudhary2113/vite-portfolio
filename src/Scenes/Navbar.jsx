@@ -38,7 +38,7 @@ const Navbar = () => {
             to="home"
             spy={true}
             smooth={true}
-            offset={-5}
+            offset={0}
             className="hover:text-[#82ddfd] transition duration-400 text-base navbar-link cursor-pointer no-underline"
             style={{ transitionDelay: "1ms" }}
           >
@@ -60,7 +60,7 @@ const Navbar = () => {
             to="projects"
             spy={true}
             smooth={true}
-            offset={-5}
+            offset={-150}
             className="hover:text-[#82ddfd] transition duration-400 text-base navbar-link cursor-pointer no-underline"
             style={{ transitionDelay: "1ms" }}
           >
@@ -71,7 +71,7 @@ const Navbar = () => {
             to="contact"
             spy={true}
             smooth={true}
-            offset={-5}
+            offset={-150}
             className="hover:text-[#82ddfd] transition duration-400 text-base navbar-link cursor-pointer no-underline"
             style={{ transitionDelay: "1ms" }}
           >

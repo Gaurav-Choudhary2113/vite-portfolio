@@ -14,18 +14,26 @@ const projectVariant = {
   visible: { opacity: 1, scale: 1 },
 };
 
-const Project = ({ title, desc }) => {
-  const overlayStyles = `absolute h-full w-full opacity-0 hover:opacity-90 transition duration-500
-    bg-grey z-30 flex flex-col justify-center items-center text-center p-16 text-deep-blue`;
-  const projectTitle = title.split(" ").join("-").toLowerCase();
+const Project = ({ title, desc, imgsrc, linky }) => {
+  const overlayStyles = `absolute h-full w-full opacity-0 hover:opacity-90 transition duration-200
+    bg-black z-30 flex flex-col justify-between items-center text-center p-8 text-white`;
+  const projectTitle = imgsrc.split(" ").join("-").toLowerCase();
 
   return (
-    <motion.div variants={projectVariant} className="relative m-3">
+    <motion.div variants={projectVariant} className="relative m-3 border">
       <div className={overlayStyles}>
-        <p className="text-2xl inter">{title}</p>
-        <p className="mt-7 code">{desc}</p>
+        <p className="text-2xl font-playfair mt-4 text-[#f9f9f9]">{title}</p>
+        <p className="code">{desc}</p>
+        <a
+          href={linky}
+          target="_blank"
+          rel="noreferrer"
+          className="px-4 py-2 mb-3 bg-white text-black codesemi cursor-pointer hover:scale-105 active:scale-100"
+        >
+          Live Demo
+        </a>
       </div>
-      <img src={`/${projectTitle}.jpeg`} alt={projectTitle} />
+      <img src={`/${projectTitle}.jpg`} alt={projectTitle} />
     </motion.div>
   );
 };
@@ -49,10 +57,8 @@ const Projects = () => {
           <p className="inter font-semibold text-3xl">PROJECTS</p>
           <div className="flex justify-center mt-5"></div>
         </div>
-        <p className="mt-10 mb-10">
-          Aliquam, amet dui feugiat facilisi dui. Aliquam aliquet integer ut
-          fames odio in at. At magna ornare dictum lectus. Purus massa morbi
-          purus nec eget eleifend ut elit.
+        <p className="mb-10 code text-[#cfcfcf] text-lg">
+          Some of the projects that i have worked on.
         </p>
       </motion.div>
 
@@ -65,10 +71,24 @@ const Projects = () => {
           whileInView="visible"
           viewport={{ once: true, amount: 0.2 }}
         >
-          <Project title="Project 1" />
-          <Project title="Project 2" />
-
-          <Project title="Project 3" />
+          <Project
+            imgsrc="Project 1"
+            title="Clueminati"
+            desc="A very interactive landing page for a event. Used NextJs and Framer Motion"
+            linky="https://clueminati23-landing-gaurav.vercel.app/"
+          />
+          <Project
+            imgsrc="Project 2"
+            title="Bolt 2.0"
+            desc="Landing page and Portal for Bolt 2.0 hackathon"
+            linky="https://bolt-landing-gaurav.vercel.app/"
+          />
+          <Project
+            imgsrc="Project 3"
+            title="Blog-Newsletter"
+            desc="Developed a dynamic website featuring blog posts for engaging content consumption"
+            linky="https://blog-website-gauravb9c6.vercel.app/"
+          />
         </motion.div>
       </div>
     </section>
@@ -77,5 +97,7 @@ const Projects = () => {
 Project.propTypes = {
   title: PropTypes.string.isRequired,
   desc: PropTypes.string,
+  imgsrc: PropTypes.string.isRequired,
+  linky: PropTypes.string.isRequired,
 };
 export default Projects;
