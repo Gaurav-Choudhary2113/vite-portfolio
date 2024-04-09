@@ -14,19 +14,16 @@ const projectVariant = {
   visible: { opacity: 1, scale: 1 },
 };
 
-const Project = ({ title }) => {
+const Project = ({ title, desc }) => {
   const overlayStyles = `absolute h-full w-full opacity-0 hover:opacity-90 transition duration-500
     bg-grey z-30 flex flex-col justify-center items-center text-center p-16 text-deep-blue`;
   const projectTitle = title.split(" ").join("-").toLowerCase();
 
   return (
-    <motion.div variants={projectVariant} className="relative">
+    <motion.div variants={projectVariant} className="relative m-3">
       <div className={overlayStyles}>
-        <p className="text-2xl font-playfair">{title}</p>
-        <p className="mt-7">
-          Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Nulla
-          porttitor accumsan tincidunt.
-        </p>
+        <p className="text-2xl inter">{title}</p>
+        <p className="mt-7 code">{desc}</p>
       </div>
       <img src={`/${projectTitle}.jpeg`} alt={projectTitle} />
     </motion.div>
@@ -35,10 +32,10 @@ const Project = ({ title }) => {
 
 const Projects = () => {
   return (
-    <section id="projects" className="pt-48 pb-48">
+    <section id="projects" className="min-h-screen mt-24 w-2/3 mx-auto">
       {/* HEADINGS */}
       <motion.div
-        className="md:w-2/5 mx-auto text-center"
+        className="md:w-2/5"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.5 }}
@@ -49,9 +46,7 @@ const Projects = () => {
         }}
       >
         <div>
-          <p className="font-playfair font-semibold text-4xl">
-            <span className="text-red">PRO</span>JECTS
-          </p>
+          <p className="inter font-semibold text-3xl">PROJECTS</p>
           <div className="flex justify-center mt-5"></div>
         </div>
         <p className="mt-10 mb-10">
@@ -62,7 +57,7 @@ const Projects = () => {
       </motion.div>
 
       {/* projects */}
-      <div className="flex justify-center">
+      <div className="flex justify-center mx-auto">
         <motion.div
           className="sm:grid sm:grid-cols-3"
           variants={container}
@@ -70,24 +65,10 @@ const Projects = () => {
           whileInView="visible"
           viewport={{ once: true, amount: 0.2 }}
         >
-          <div
-            className="flex justify-center text-center items-center p-10 bg-red
-              max-w-[400px] max-h-[400px] text-2xl font-playfair font-semibold"
-          >
-            BEAUTIFUL USER INTERFACES
-          </div>
           <Project title="Project 1" />
           <Project title="Project 2" />
 
           <Project title="Project 3" />
-          <Project title="Project 4" />
-
-          <div
-            className="flex justify-center text-center items-center p-10 bg-blue
-              max-w-[400px] max-h-[400px] text-2xl font-playfair font-semibold"
-          >
-            SMOOTH USER EXPERIENCE
-          </div>
         </motion.div>
       </div>
     </section>
@@ -95,5 +76,6 @@ const Projects = () => {
 };
 Project.propTypes = {
   title: PropTypes.string.isRequired,
+  desc: PropTypes.string,
 };
 export default Projects;

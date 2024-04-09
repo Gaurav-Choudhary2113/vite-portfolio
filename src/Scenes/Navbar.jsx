@@ -30,8 +30,10 @@ const Navbar = () => {
       className="w-full z-50 flex justify-center fixed top-0 my-6"
     >
       <div className="flex justify-between w-2/3 items-center backdrop-blur-md bg-[#00000074] px-7 py-4 rounded-3xl">
-        <h4 className="font-playfair text-2xl font-bold">Gaurav Choudhary</h4>
-        <div className="flex codesemi text-[#cfcfcf] justify-between gap-16 font-opensans text-sm font-semibold">
+        <h4 className="font-playfair px-5 text-2xl font-bold">
+          Gaurav Choudhary
+        </h4>
+        <div className="flex codesemi text-[#cfcfcf] justify-between gap-16 font-opensans text-sm font-semibold px-5">
           <Link
             to="home"
             spy={true}
@@ -43,7 +45,7 @@ const Navbar = () => {
             {" "}
             About Me
           </Link>
-          <Link
+          {/* <Link
             to="skills"
             spy={true}
             smooth={true}
@@ -53,7 +55,7 @@ const Navbar = () => {
           >
             {" "}
             Skills
-          </Link>
+          </Link> */}
           <Link
             to="projects"
             spy={true}

@@ -1,6 +1,6 @@
 import Navbar from "./Scenes/Navbar";
 import Landing from "./Scenes/Landing";
-import MySkills from "./Scenes/MySkills";
+// import MySkills from "./Scenes/MySkills";
 import Projects from "./Scenes/Projects";
 import Contact from "./Scenes/Contact";
 import Footer from "./Scenes/Footer";
@@ -17,7 +17,7 @@ function App() {
       >
         <Navbar />
         <Landing />
-        <MySkills />
+        {/* <MySkills /> */}
         <Projects />
         <Contact />
         <Footer />

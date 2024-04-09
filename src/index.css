@@ -83,3 +83,22 @@ body,
   /* Rounded corners */
 }
 
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}
+img,
+svg,
+video,
+canvas,
+audio,
+iframe,
+embed,
+object {
+  display: block;
+ 
+}
+html{
+  color: white;
+}

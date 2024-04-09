@@ -10,7 +10,7 @@ const Landing = () => {
   return (
     <section
       id="home"
-      className="md:flex md:justify-between md:items-center md:h-full gap-8  py-10"
+      className="md:flex md:justify-between md:items-center md:h-full gap-8 py-10 min-h-screen"
     >
       <div className="md:mx-64">
         <motion.div
