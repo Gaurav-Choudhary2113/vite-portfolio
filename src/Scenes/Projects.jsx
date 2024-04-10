@@ -30,7 +30,7 @@ const Project = ({ title, desc, imgsrc, linky }) => {
           rel="noreferrer"
           className="px-4 py-2 mb-3 bg-white text-black codesemi cursor-pointer hover:scale-105 active:scale-100"
         >
-          Live Demo
+          View Project
         </a>
       </div>
       <img src={`/${projectTitle}.jpg`} alt={projectTitle} />
@@ -40,10 +40,10 @@ const Project = ({ title, desc, imgsrc, linky }) => {
 
 const Projects = () => {
   return (
-    <section id="projects" className="min-h-screen mt-24 w-2/3 mx-auto">
+    <section id="projects" className="min-h-screen pt-24 w-2/3 mx-auto">
       {/* HEADINGS */}
       <motion.div
-        className="md:w-2/5"
+        className="flex flex-col w-full justify-center items-center"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.5 }}
@@ -54,11 +54,12 @@ const Projects = () => {
         }}
       >
         <div>
-          <p className="inter font-semibold text-3xl">PROJECTS</p>
-          <div className="flex justify-center mt-5"></div>
+          <p className="inter text-[#e3e3e3] font-semibold text-5xl">
+            PROJECTS
+          </p>
         </div>
-        <p className="mb-10 code text-[#cfcfcf] text-lg">
-          Some of the projects that i have worked on.
+        <p className="mb-20 mt-4 codesemi text-[#a9a9a9] text-lg">
+          Focused on the experience, driven by the engineering.
         </p>
       </motion.div>
 
@@ -74,7 +75,7 @@ const Projects = () => {
           <Project
             imgsrc="Project 1"
             title="Clueminati"
-            desc="A very interactive landing page for a event. Used NextJs and Framer Motion"
+            desc="A very interactive landing page. Used NextJs and Framer Motion"
             linky="https://clueminati23-landing-gaurav.vercel.app/"
           />
           <Project

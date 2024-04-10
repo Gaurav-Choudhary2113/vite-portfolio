@@ -8,7 +8,6 @@ body,
 #root,
 .app {
   background-image: url("../src/assets/background.jpg");
-  
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -100,5 +99,5 @@ object {
  
 }
 html{
-  color: white;
+  color: rgb(240, 240, 240);
 }

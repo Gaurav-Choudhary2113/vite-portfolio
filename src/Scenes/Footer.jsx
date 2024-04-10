@@ -2,17 +2,14 @@ import SocialMediaIcons from "../Components/SocialMediaIcons";
 
 const Footer = () => {
   return (
-    <footer className="h-64 bg-red pt-10">
-      <div className="w-10/12 mx-auto">
-        <SocialMediaIcons />
-        <div className="md:flex justify-center md:justify-between text-center ">
-          <p className="font-playfair font-semibold text-2xl text-yellow">
+    <footer className="h-40 bg-[#050914] pt-5 border-t-2 border-[#c3d7db]">
+      <div className="flex flex-col justify-center items-center  mx-20">
+        <div className="md:flex my-4 justify-center md:justify-between text-center ">
+          <p className="font-playfair font-semibold text-2xl text-white">
             Gaurav Choudhary
           </p>
-          <p className="font-playfair text-md text-yellow">
-            ©2023 Madara Technologies. All Rights Reserved.
-          </p>
         </div>
+        <SocialMediaIcons />
       </div>
     </footer>
   );

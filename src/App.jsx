@@ -4,24 +4,15 @@ import Landing from "./Scenes/Landing";
 import Projects from "./Scenes/Projects";
 import Contact from "./Scenes/Contact";
 import Footer from "./Scenes/Footer";
-import { ReactLenis } from "@studio-freight/react-lenis";
 function App() {
   return (
     <div className="app bg-deep-blue">
-      <ReactLenis
-        root
-        options={{
-          lerp: 0.1,
-          duration: 1.5,
-        }}
-      >
-        <Navbar />
-        <Landing />
-        {/* <MySkills /> */}
-        <Projects />
-        <Contact />
-        <Footer />
-      </ReactLenis>
+      <Navbar />
+      <Landing />
+      {/* <MySkills /> */}
+      <Projects />
+      <Contact />
+      <Footer />
     </div>
   );
 }
