@@ -35,7 +35,11 @@ const TypingText = ({ texts, speed }) => {
     return () => clearInterval(typingInterval);
   }, [currentIndex, currentTextIndex, texts, speed, isRetreating, typedText]);
 
-  return <span className="code text-[#82ddfd] text-lg my-5">{typedText}</span>;
+  return (
+    <span className="code text-[#82ddfd] md:text-lg text-sm my-5">
+      {typedText}
+    </span>
+  );
 };
 TypingText.propTypes = {
   texts: PropTypes.string.isRequired,

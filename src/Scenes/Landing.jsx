@@ -10,9 +10,9 @@ const Landing = () => {
   return (
     <section
       id="home"
-      className="md:flex md:justify-between md:items-center md:h-full gap-8 py-10 min-h-screen"
+      className="flex md:justify-between md:items-center justify-center items-center h-screen"
     >
-      <div className="md:mx-64">
+      <div className="md:mx-64 mx-10 sm:mx-20 mt-20">
         <motion.div
           initial="hidden"
           whileInView="visible"
@@ -23,17 +23,17 @@ const Landing = () => {
             visible: { opacity: 1, x: 0 },
           }}
         >
-          <p className="h-8 ml-2">
+          <p className="h-8 ml-2 text-center md:text-left mb-5 sm:block hidden">
             <TypingText texts={texts} speed={speed} delay={1000} />
           </p>
-          <p className="inter text-7xl leading-12 font-playfair z-10 text-center md:text-start">
+          <p className="inter md:text-7xl text-4xl sm:text-5xl leading-12 z-10 text-center md:text-start">
             Gaurav Choudhary.
           </p>
-          <p className="inter text-6xl font-playfair z-10 text-center md:text-start text-[#ffffffa1]">
+          <p className="inter md:text-6xl sm:text-4xl text-3xl z-10 text-center md:text-start text-[#ffffffa1]">
             Crafting Meaningful and Elegant Websites.
           </p>
 
-          <p className="code mt-10 mb-7 md:px-0 text-md text-center md:text-start xs:text-center xs:px-12">
+          <p className="code mt-10 mb-7 md:px-0 sm:text-md text-sm text-center md:text-start xs:text-center xs:px-12">
             A Front-End Developer and a Cyebr Security Enthusiast with a strong
             desire to learn and grow as a coder. Currently proficient in React
             and NextJS.

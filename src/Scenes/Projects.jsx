@@ -22,13 +22,15 @@ const Project = ({ title, desc, imgsrc, linky }) => {
   return (
     <motion.div variants={projectVariant} className="relative m-3 border">
       <div className={overlayStyles}>
-        <p className="text-2xl font-playfair mt-4 text-[#f9f9f9]">{title}</p>
-        <p className="code">{desc}</p>
+        <p className="md:text-2xl text-lg font-playfair mt-4 text-[#f9f9f9]">
+          {title}
+        </p>
+        <p className="code md:text-base text-xs">{desc}</p>
         <a
           href={linky}
           target="_blank"
           rel="noreferrer"
-          className="px-4 py-2 mb-3 bg-white text-black codesemi cursor-pointer hover:scale-105 active:scale-100"
+          className="md:px-4 md:py-2 px-2 py-1 mt-2 mb-3 md:text-base text-sm bg-white text-black codesemi cursor-pointer hover:scale-105 active:scale-100"
         >
           View Project
         </a>
@@ -54,11 +56,11 @@ const Projects = () => {
         }}
       >
         <div>
-          <p className="inter text-[#e3e3e3] font-semibold text-5xl">
+          <p className="inter text-[#e3e3e3] font-semibold md:text-5xl text-3xl sm:text-4xl">
             PROJECTS
           </p>
         </div>
-        <p className="mb-20 mt-4 codesemi text-[#a9a9a9] text-lg">
+        <p className="mb-20 mt-4 codesemi text-[#a9a9a9] md:text-lg text-sm flex text-center">
           Focused on the experience, driven by the engineering.
         </p>
       </motion.div>

@@ -17,16 +17,16 @@ const Contact = () => {
     <section id="contact" className="h-100vh my-40">
       <div className="flex flex-col w-full justify-center items-center">
         <div>
-          <p className="inter text-[#e3e3e3] font-semibold text-5xl">
+          <p className="inter text-[#e3e3e3] font-semibold md:text-5xl text-3xl sm:text-4xl">
             Contact Me
           </p>
         </div>
-        <p className="mb-20 mt-4 codesemi text-[#a9a9a9] text-lg">
+        <p className="mb-20 mt-4 codesemi text-[#a9a9a9] md:text-lg text-sm flex text-center mx-10">
           &quot;Hello there! Let&apos;s connect. Drop me a message!&quot;
         </p>
       </div>
-      <div className="flex justify-center w-full items-center mt-5">
-        <div className="codesemi w-1/2 mt-10 mx-20 md:mt-0">
+      <div className="flex justify-center w-full items-center">
+        <div className="codesemi ms:w-1/2 w-[90%] md:mx-20 mx-10 md:mt-0">
           <form
             action="https://formsubmit.co/8fc742b48d7a6c6a4745add36861b097"
             method="POST"
@@ -35,7 +35,7 @@ const Contact = () => {
             className="flex items-end flex-col"
           >
             <input
-              className="w-full border-2 rounded-sm my-2 border-[#8c8c8c95] bg-[#00000043] font-semibold placeholder-opaque-white py-2 px-4"
+              className="w-full border-2 rounded-sm my-2 border-[#8c8c8c95] bg-[#00000043] font-semibold placeholder-opaque-white py-2 px-4 md:text-base text-sm"
               type="text"
               placeholder="NAME"
               {...register("name", {
@@ -44,13 +44,13 @@ const Contact = () => {
               })}
             />
             {errors.name && (
-              <p className="text-[#87daea] mt-1">
+              <p className="text-[#87daea] mt-1 md:text-base text-xs">
                 {errors.name.type === "required" && "This field is required"}
                 {errors.name.type === "maxLength" && "Max length exceeded"}
               </p>
             )}
             <input
-              className="w-full border-2 rounded-sm my-2 border-[#8c8c8c95] bg-[#00000043] font-semibold placeholder-opaque-white py-2 px-4"
+              className="w-full border-2 rounded-sm my-2 border-[#8c8c8c95] bg-[#00000043] font-semibold placeholder-opaque-white py-2 px-4 md:text-base text-sm"
               type="text"
               placeholder="EMAIL"
               {...register("email", {
@@ -59,13 +59,13 @@ const Contact = () => {
               })}
             />
             {errors.email && (
-              <p className="text-[#87daea] mt-1">
+              <p className="text-[#87daea] mt-1 md:text-base text-xs">
                 {errors.email.type === "required" && "This field is required"}
                 {errors.email.type === "pattern" && "Invalid Email address"}
               </p>
             )}
             <textarea
-              className="w-full border-2 rounded-sm my-2 border-[#8c8c8c95] bg-[#00000043] font-semibold placeholder-opaque-white py-2 px-4"
+              className="w-full border-2 rounded-sm my-2 border-[#8c8c8c95] bg-[#00000043] font-semibold placeholder-opaque-white py-2 px-4 md:text-base text-sm"
               type="text"
               placeholder="MESSAGE"
               rows="4"
@@ -76,7 +76,7 @@ const Contact = () => {
               })}
             />
             {errors.email && (
-              <p className="text-[#87daea] mt-1">
+              <p className="text-[#87daea] mt-1 md:text-base text-xs">
                 {errors.message.type === "required" && "This field is required"}
                 {errors.message.type === "maxLenght" &&
                   "Max Length is 2000 chars."}
@@ -84,7 +84,7 @@ const Contact = () => {
             )}
             <button
               type="sumbit"
-              className="px-4 w-[180px] py-3 bg-[#04090f] border-[#8c8c8c95] border-2 font-semibold text-[#b7b7b7] mt-5 hover:bg-[#9ed0ff] hover:text-[#000000] transition duration-200"
+              className="px-4 w-[180px] py-3 bg-[#04090f] border-[#8c8c8c95] border-2 font-semibold text-[#b7b7b7] mt-5 hover:bg-[#9ed0ff] hover:text-[#000000] transition duration-200 md:text-base text-sm"
             >
               SEND MESSAGE
             </button>
