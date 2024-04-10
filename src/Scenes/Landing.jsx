@@ -26,10 +26,10 @@ const Landing = () => {
           <p className="h-8 ml-2 text-center md:text-left mb-5 sm:block hidden">
             <TypingText texts={texts} speed={speed} delay={1000} />
           </p>
-          <p className="inter md:text-7xl text-4xl sm:text-5xl leading-12 z-10 text-center md:text-start">
+          <p className="inter md:text-7xl text-4xl sm:text-5xl leading-12 text-center md:text-start">
             Gaurav Choudhary.
           </p>
-          <p className="inter md:text-6xl sm:text-4xl text-3xl z-10 text-center md:text-start text-[#ffffffa1]">
+          <p className="inter md:text-6xl sm:text-4xl text-3xl text-center md:text-start text-[#ffffffa1]">
             Crafting Meaningful and Elegant Websites.
           </p>
 

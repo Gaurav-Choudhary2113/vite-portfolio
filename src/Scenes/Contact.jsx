@@ -26,7 +26,7 @@ const Contact = () => {
         </p>
       </div>
       <div className="flex justify-center w-full items-center">
-        <div className="codesemi ms:w-1/2 w-[90%] md:mx-20 mx-10 md:mt-0">
+        <div className="codesemi md:w-1/2 w-[90%] md:mx-20 mx-10 md:mt-0">
           <form
             action="https://formsubmit.co/8fc742b48d7a6c6a4745add36861b097"
             method="POST"

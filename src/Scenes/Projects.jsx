@@ -16,13 +16,13 @@ const projectVariant = {
 
 const Project = ({ title, desc, imgsrc, linky }) => {
   const overlayStyles = `absolute h-full w-full opacity-0 hover:opacity-90 transition duration-200
-    bg-black z-30 flex flex-col justify-between items-center text-center p-8 text-white`;
+    bg-black flex flex-col justify-between items-center text-center p-8 text-white`;
   const projectTitle = imgsrc.split(" ").join("-").toLowerCase();
 
   return (
     <motion.div variants={projectVariant} className="relative m-3 border">
       <div className={overlayStyles}>
-        <p className="md:text-2xl text-lg font-playfair mt-4 text-[#f9f9f9]">
+        <p className="md:text-2xl sm:text-xl text-lg font-playfair mt-4 text-[#f9f9f9]">
           {title}
         </p>
         <p className="code md:text-base text-xs">{desc}</p>
@@ -42,7 +42,10 @@ const Project = ({ title, desc, imgsrc, linky }) => {
 
 const Projects = () => {
   return (
-    <section id="projects" className="min-h-screen pt-24 w-2/3 mx-auto">
+    <section
+      id="projects"
+      className="min-h-screen pt-24 lg:w-2/3 md:w-[80%] w-2/3 mx-auto"
+    >
       {/* HEADINGS */}
       <motion.div
         className="flex flex-col w-full justify-center items-center"
@@ -68,7 +71,7 @@ const Projects = () => {
       {/* projects */}
       <div className="flex justify-center mx-auto">
         <motion.div
-          className="sm:grid sm:grid-cols-3"
+          className="sm:grid md:grid-cols-3 sm:grid-cols-2"
           variants={container}
           initial="hidden"
           whileInView="visible"
