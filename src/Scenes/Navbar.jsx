@@ -135,7 +135,7 @@ const Navbar = () => {
                 spy={true}
                 smooth={true}
                 offset={0}
-                className="hover:text-[#82ddfd] transition duration-400 text-base navbar-link cursor-pointer no-underline"
+                className="hover:text-[#82ddfd] transition duration-400 text-sm navbar-link cursor-pointer no-underline"
                 style={{ transitionDelay: "1ms" }}
                 onClick={toggleMobileMenu}
               >
@@ -155,7 +155,7 @@ const Navbar = () => {
                 spy={true}
                 smooth={true}
                 offset={-50}
-                className="hover:text-[#82ddfd] transition duration-400 text-base navbar-link cursor-pointer no-underline"
+                className="hover:text-[#82ddfd] transition duration-400 text-sm navbar-link cursor-pointer no-underline"
                 style={{ transitionDelay: "1ms" }}
                 onClick={toggleMobileMenu}
               >
@@ -174,7 +174,7 @@ const Navbar = () => {
                 spy={true}
                 smooth={true}
                 offset={-140}
-                className="hover:text-[#82ddfd] transition duration-400 text-base navbar-link cursor-pointer no-underline"
+                className="hover:text-[#82ddfd] transition duration-400 text-sm navbar-link cursor-pointer no-underline"
                 style={{ transitionDelay: "1ms" }}
                 onClick={toggleMobileMenu}
               >
